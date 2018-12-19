@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    
+    <title><%: Page.Title %></title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <script type="text/javascript" src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/jquery.blockUI.js" type="text/javascript"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />     
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+   
+</head>
+<body>
+    <form runat="server">
+        
+
+        
+        <div class="page-container">
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="#">Lorry Service</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>                                                                      
+                    <li class="xn-title" style="color:#fff;"><b>Our Parcel Service Portal</b></li>
+                  
+					<li id="liVehcicle">
+                        <a href="vehicle.aspx"><span class="fa fa-truck"></span> <span class="xn-text">Vehicle Reg.</span></a>
+                    </li>   
+					<li id="liItemization">
+                        <a href="item.aspx"><span class="fa fa-list-alt"></span> <span class="xn-text"> Itemization </span></a>
+                    </li>   
+					<li id="liBranchManagement">
+                        <a href="branch.aspx"><span class="fa fa-sitemap"></span> <span class="xn-text"> Branch Mangement </span></a>
+                    </li>  
+                    <li id="liLREntry">
+                        <a href="LREntry.aspx"><span class="fa fa-credit-card"></span> <span class="xn-text"> LR Entry</span></a>
+                    </li>  
+                    <li id="liHelp">
+                        <a href="branch.aspx"><span class="fa fa-book"></span> <span class="xn-text"> Help Documents </span></a>
+                    </li>  
+                    <li id="liContact">
+                        <a href="branch.aspx"><span class="fa fa-mobile"></span> <span class="xn-text">Contact </span></a>
+                    </li>
+                     <li id="liAbout">
+                        <a href="branch.aspx"><span class="fa fa-circle"></span> <span class="xn-text">About Us </span></a>
+                    </li>
+                      <li id="liLogOut">
+                        <a href="default.aspx"><span class="fa fa-sign-out"></span> <span class="xn-text">Log Out</span></a>
+                    </li> 
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->                    
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+                
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Portal</a></li>                    
+                    <li class="active"><%: Page.Title %> </li>
+                </ul>
+                <!-- END BREADCRUMB -->                
+                          
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                
+             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>           
+                
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                
+            </div>
+           
+          <%--  <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>--%>
+        </div>
+
+    </form>
+     
+      <script type="text/javascript" src="Scripts/plugins/jquery/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="Scripts/plugins/bootstrap/bootstrap.min.js"></script>  
+      <script type="text/javascript" src="Scripts/plugins.js"></script>        
+      <script type="text/javascript" src="Scripts/actions.js"></script>  
+    
+</body>
+</html>
